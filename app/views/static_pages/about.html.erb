@@ -1,4 +1,32 @@
 <% provide(:title, "About") %>
 
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<h1>about</h1>
+
+<h2>bio</h2>
+
+<p>Hannah is a life-long Nebraskan with a liberal arts degree in journalism 
+& media and philosophy. When not making marketing magic, her interests include 
+distance running, pastries, yoga, feminism, traveling and her cat. 
+Hop over to the blog to <%= link_to "learn more", root_path %>.
+</p>
+
+<h2>top skills</h2>
+
+<ul>
+  <li>Copywriting</li>
+  <li>Content marketing</li>
+  <li>Marketing campaign creation</li>
+  <li>Brand strategy</li>
+</ul>
+
+<h2>Gallup strengths</h2>
+
+<ul>
+  <li>Achiever</li>
+  <li>Activator</li>
+  <li>Strategic</li>
+  <li>Command</li>
+  <li>Focus</li>
+</ul>
+
+<%= image_tag "about.png", alt: "hiking picture", class: "about-pic" %>

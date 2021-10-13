@@ -1,0 +1,16 @@
+  <!-- Top Navigation Menu -->
+    <span class="name"><%= link_to "hannah bauer", root_path %></span>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+      <ul>
+        <li><%= link_to "hello", hello_path %></li>
+        <li><%= link_to "about", about_path %></li>
+        <li><%= link_to "work", work_path %></li>
+        <li><%= link_to "contact", contact_path %></li>
+        <li class="accent"><%= link_to "blog", root_path %></li>
+      </ul>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>

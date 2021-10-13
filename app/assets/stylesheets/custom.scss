@@ -1,0 +1,215 @@
+/* Variables */
+
+$primary-color:  #212941;
+$secondary-color:  #43BA7F;
+$secondary-color-light:  #82ddaf;
+$tertiary-color:  #FF5218;
+$accent-color:  #E21B27;
+$neutral-color: #F5F7FF;
+
+/* Reset */
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+// HTML5 display-role reset for older browsers 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+	content: none;
+}
+table {
+  border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Universal */
+
+html {
+  background-color: $secondary-color-light;
+}
+
+/* Navigation */
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: $primary-color;
+  position: relative;
+  text-align: center;
+  a.icon {
+    background: $primary-color;
+    color: $neutral-color;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 18.5px 18.5px;
+  }
+  a {
+    color: $neutral-color;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    &:visited {
+      color: $neutral-color;
+    }
+    &:hover {
+      background-color: $neutral-color;
+      color: $primary-color;
+    }
+    &:active {
+      background-color: $neutral-color;
+      color: $accent-color;
+    }
+  }
+  .accent {
+    a {
+      color: $accent-color;
+    }
+  }
+  .name {
+    a {
+      font-weight: bold;
+      font-size: 25px;
+      padding: 14px;
+    }
+  }
+}
+
+/* Article */
+
+article {
+  margin: 10px 20px;
+  h1 {
+    font-size: 25px;
+    color: $accent-color;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h1, h2, p {
+    padding: 10px 0;
+  }
+
+  p, ul {
+    font-size: 15px;
+  }
+
+  ul {
+    padding: 10px 20px;
+  }
+}
+
+.logos {
+  text-align: center;
+  img {
+    max-width: 45%;
+    padding: 10px;
+  }
+}
+
+.cert {
+  text-align: center;
+  padding: 20px 0 50px 0;
+  .certification {
+    max-width: 100%;
+  }
+}
+
+.about-pic {
+  max-width: 100%;
+  padding-bottom: 50px;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background-color: $primary-color;
+  color: $neutral-color;
+  font-size: 12px;
+  text-align: center;
+  p {
+    padding: 2px;
+  }
+  a {
+    color: $accent-color;
+    text-decoration: none;
+    text-decoration: underline;
+    &:visited {
+      color: $accent-color;
+    }
+    &:hover {
+      color: $neutral-color;
+    }
+    &:active {
+      color: $neutral-color;
+    }
+  }
+}
+
+/* Errors */
+
+div.field,
+div.actions {
+  margin-bottom: 10px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff; }
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square; }
+
+label {
+  display: block; }
