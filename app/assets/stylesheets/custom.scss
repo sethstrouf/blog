@@ -1,6 +1,7 @@
 /* Variables */
 
 $primary-color:  #212941;
+$primary-color-light: #cedaff;
 $secondary-color:  #43BA7F;
 $secondary-color-light:  #82ddaf;
 $tertiary-color:  #FF5218;
@@ -44,7 +45,21 @@ table {
 /* Universal */
 
 html {
-  background-color: $secondary-color-light;
+  background-color: $primary-color-light;
+  a {
+    color: $accent-color;
+    text-decoration: none;
+    text-decoration: underline;
+    &:visited {
+      color: $accent-color;
+    }
+    &:hover {
+      color: $neutral-color;
+    }
+    &:active {
+      color: $neutral-color;
+    }
+  }
 }
 
 /* Navigation */
@@ -148,6 +163,14 @@ article {
   padding-bottom: 50px;
 }
 
+.blog {
+  text-align: center;
+}
+
+.date {
+  text-align: center;
+}
+
 /* Footer */
 footer {
   position: fixed;
@@ -161,19 +184,52 @@ footer {
   p {
     padding: 2px;
   }
-  a {
-    color: $accent-color;
-    text-decoration: none;
-    text-decoration: underline;
-    &:visited {
-      color: $accent-color;
+}
+
+/* Image Carousel */
+
+.work {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  .carousel {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    .gallery {
+      padding: 2px;
+      flex: 1;
+      &:hover {
+        filter: brightness(75%);
+      }
+      img {
+        max-width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+      .overlay {
+        position: relative;
+        top: -80%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+      }
     }
-    &:hover {
-      color: $neutral-color;
-    }
-    &:active {
-      color: $neutral-color;
-    }
+  }
+}
+
+div.desc {
+  padding: 5px 0;
+  text-align: left;
+  font-size: 12px;
+  h3 {
+    font-size: 15px;
+    padding-bottom: 5px;
+  }
+  p {
+    font-style: italic;
+    font-size: 12px;
   }
 }
 
