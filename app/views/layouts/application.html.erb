@@ -12,15 +12,17 @@
   </head>
 
   <body>
-    <nav class="topnav">
-      <%= render 'shared/navigation' %>
-    </nav>
-    <article>
-      <%= yield %>
-    </article>
-    <footer>
-      <%= render 'shared/footer' %>
-    </footer>
+    <div class="container">
+      <nav class="topnav">
+        <%= render 'shared/navigation' %>
+      </nav>
+      <article>
+        <%= yield %>
+      </article>
+      <footer>
+        <%= render 'shared/footer' %>
+      </footer>
+    </div>
 
     <script>
     /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */

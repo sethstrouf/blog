@@ -62,11 +62,21 @@ html {
   }
 }
 
+.container {
+  margin: 0 auto;
+  @media all and (min-width: 1090px) {
+    width: 1080px;
+  }
+}
+
 /* Navigation */
 
 /* Hide the links inside the navigation menu (except for logo/home) */
 .topnav #myLinks {
   display: none;
+  @media all and (min-width: 1090px) {
+    display: block;
+  }
 }
 
 .topnav {
@@ -82,6 +92,14 @@ html {
     right: 0;
     top: 0;
     padding: 18.5px 18.5px;
+    @media all and (min-width: 1090px) {
+      display: none;
+    }
+  }
+  i {
+    @media all and (min-width: 1090px) {
+      display: none;
+    }
   }
   a {
     color: $neutral-color;
@@ -111,9 +129,25 @@ html {
       font-weight: bold;
       font-size: 25px;
       padding: 14px;
+      @media all and (min-width: 1090px) {
+        float: left;
+      }
+    }
+  }
+  ul {
+    @media all and (min-width: 1090px) {
+      float: right;
+      list-style-type: none;
+      a {
+        height: 53px;
+      }
+      li {
+        float: left;
+      }
     }
   }
 }
+
 
 /* Article */
 
@@ -127,6 +161,7 @@ article {
 
   h2 {
     font-size: 20px;
+    text-align: center;
   }
 
   h1, h2, p {
@@ -139,6 +174,28 @@ article {
 
   ul {
     padding: 10px 20px;
+  }
+
+  @media all and (min-width: 1090px) {
+    h1 {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 25px;
+    }
+    p, ul {
+      font-size: 18px;
+    }
+  }
+}
+
+.about-pic {
+  max-width: 100%;
+  margin: 0 auto;
+  border: solid thin $primary-color;
+  display: block;
+  @media all and (min-width: 1090px) {
+    width: 400px;
   }
 }
 
@@ -158,10 +215,6 @@ article {
   }
 }
 
-.about-pic {
-  max-width: 100%;
-  padding-bottom: 50px;
-}
 
 .blog {
   text-align: center;
@@ -184,6 +237,11 @@ footer {
   p {
     padding: 2px;
   }
+  @media all and (min-width: 1090px) {
+    width: 1080px;
+    font-size: 16px;
+    height: 45px;
+  }
 }
 
 /* Image Carousel */
@@ -192,7 +250,7 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   .carousel {
     align-self: center;
     display: flex;
@@ -226,10 +284,16 @@ div.desc {
   h3 {
     font-size: 15px;
     padding-bottom: 5px;
+    @media all and (min-width: 1090px) {
+      font-size: 20px;
+    }
   }
   p {
     font-style: italic;
     font-size: 12px;
+    @media all and (min-width: 1090px) {
+      font-size: 18px;
+    }
   }
 }
 
