@@ -120,9 +120,7 @@ html {
     }
   }
   .accent {
-    a {
-      color: $accent-color;
-    }
+    color: $accent-color !important;
   }
   .name {
     a {
