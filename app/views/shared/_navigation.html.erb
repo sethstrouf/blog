@@ -6,6 +6,9 @@
         <li><%= link_to "work", work_path %></li>
         <li><%= link_to "contact", contact_path %></li>
         <li><%= link_to "blog", root_path %></li>
+        <% if current_admin %>
+          <li><%= link_to 'New Post', new_post_path %></li>
+        <% end %>
       </ul>
     </div>
     <a href="javascript:void(0);" class="icon" onclick="toggleNavigation()">
