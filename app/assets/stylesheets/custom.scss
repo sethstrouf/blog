@@ -62,6 +62,12 @@ html {
   }
 }
 
+input, textarea {
+  padding: 2px;
+  margin: 5px;
+  border: solid thin gray;
+}
+
 .container {
   margin: 0 auto;
   @media all and (min-width: 1090px) {
