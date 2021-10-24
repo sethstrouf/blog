@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'contacts/new'
+  post 'contacts/new', to: 'contacts#create'
+  get 'contacts/thanks', to: 'contacts#thanks'
   devise_for :admins, :path => "",
     :path_names => {
       :sign_in => 'admin'
