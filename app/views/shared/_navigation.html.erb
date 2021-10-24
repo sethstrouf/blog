@@ -7,7 +7,9 @@
         <li><%= link_to "contact", contact_path %></li>
         <li><%= link_to "blog", root_path %></li>
         <% if current_admin %>
-          <li><%= link_to 'New Post', new_post_path, class: "accent" %></li>
+          <li><%= link_to 'new post', new_post_path, class: "accent" %></li>
+          <li><%= link_to 'log out', destroy_admin_session_path,
+                  method: :delete, class: "accent" %></li>
         <% end %>
       </ul>
     </div>
