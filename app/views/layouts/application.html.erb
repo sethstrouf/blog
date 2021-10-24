@@ -27,7 +27,10 @@
     </div>
 
     <script>
-    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+    /* Toggle between showing and hiding the navigation menu links when the 
+       user clicks on the hamburger menu / bar icon */
+    document.getElementById("hamburger").addEventListener("click", toggleNavigation);
+
     function toggleNavigation() {
       var x = document.getElementById("myLinks");
       if (x.style.display === "block") {
@@ -35,11 +38,7 @@
       } else {
         x.style.display = "block";
       }
-    } 
-
-    function(id) {
-      alert(id);
-    }
+    };
     </script>
   </body>
 </html>
