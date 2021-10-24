@@ -120,6 +120,7 @@ html {
     }
   }
   .accent {
+    font-weight: bold;
     color: $accent-color !important;
   }
   .name {
@@ -302,6 +303,8 @@ div.actions {
   margin-bottom: 10px; }
 
 #notice {
+  padding-top: 20px;
+  font-weight: bold;
   color: green; }
 
 .field_with_errors {
