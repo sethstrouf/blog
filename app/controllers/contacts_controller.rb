@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     if @contact.save
-      ContactMailer.general_message(@contact).deliver_later
+      ContactMailer.general_message(@contact).deliver_now
       render :thanks
     else
       render :new
