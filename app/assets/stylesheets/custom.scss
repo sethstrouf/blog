@@ -194,6 +194,10 @@ article {
   }
 }
 
+.title {
+  color: black !important;
+}
+
 .about-pic {
   max-width: 100%;
   margin: 0 auto;
@@ -223,6 +227,15 @@ article {
 
 .blog {
   text-align: center;
+}
+
+.post {
+  border-bottom: thin solid rgba(128, 128, 128, 0.527);
+  padding: 25px 0;
+}
+
+.post:last-child {
+  border-bottom: none;
 }
 
 .date {
