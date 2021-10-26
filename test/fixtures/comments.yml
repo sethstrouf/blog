@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+has_name:
+  name: Seth
+  body: My first comment!
+
+no_name:
+  name: 
+  body: Anonymous comment!!
