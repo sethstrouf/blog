@@ -23,4 +23,9 @@ class PostTest < ActiveSupport::TestCase
     assert post.invalid?
   end
 
+  test "posts can create comments" do
+    comment = posts(:one).comments.create(name: "seth", body: "hi")
+    assert comment.valid?
+  end
+
 end
