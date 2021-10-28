@@ -10,7 +10,8 @@ class CommentsController < ApplicationController
       flash[:notice] = "Comment posted!"
       redirect_to @post
     else
-      render 'posts/show'
+      flash[:alert] = "Comment failed to post! It may be too long or blank. "
+      redirect_to @post
     end
   end
 
