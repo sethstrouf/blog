@@ -1,0 +1,13 @@
+<% @post.comments.reverse_each do |comment| %>
+  <% if comment.valid? %>
+    <div class="comment">
+      <p><% if comment.name.blank? %>
+        Anonymous<br>
+      <% else %>
+        <%= comment.name %><br>
+      <% end %></p>
+      <span class="date"><%= comment.created_at.try(:strftime, "%B %d, %Y") %></span>
+      <p><%= comment.body %></p>
+    </div>
+  <% end %>
+<% end %>
