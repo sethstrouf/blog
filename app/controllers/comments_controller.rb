@@ -10,8 +10,7 @@ class CommentsController < ApplicationController
       flash[:notice] = "Comment posted!"
       redirect_to @post
     else
-      flash[:alert] = "You can't leave a blank comment!"
-      redirect_to @post
+      render 'posts/show'
     end
   end
 
