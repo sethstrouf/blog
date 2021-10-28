@@ -6,6 +6,7 @@
       data: { confirm: 'Are you sure you want to delete this post?' } %>
 <% end %>
 
+<div class="post">
 <h1><%= @post.title %></h1>
 
 <p class="date">Created: <%= @post.created_at.strftime("%B %d, %Y")  %>
@@ -15,6 +16,7 @@
 </p>
 
 <p><%= @post.body %></p>
+</div>
 
 <p><strong>Leave a comment!</strong></p>
 
