@@ -321,6 +321,23 @@ div.desc {
   }
 }
 
+/* Comments */
+
+.comment {
+  padding: 10px 0;
+  border-bottom: thin solid gray;
+  &:last-child {
+    border-bottom: none;
+  }
+  .date {
+    font-size: 10px;
+    font-style: italic;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+
 /* Errors */
 
 div.field,

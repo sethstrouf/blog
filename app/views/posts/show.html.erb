@@ -16,6 +16,8 @@
 
 <p><%= @post.body %></p>
 
+<p><strong>Leave a comment!</strong></p>
+
 <%= form_with(model: @comment) do |form| %>
   <% if @comment.errors.any? %>
     <div id="error_explanation">
@@ -36,7 +38,7 @@
 
   <div class="field">
     <%= form.label :body %>
-    <%= form.text_area :body, size: "33x4" %>
+    <%= form.text_area :body, size: "33x2" %>
   </div>
 
   <%= form.hidden_field :post_id, value: @post.id %>
@@ -47,13 +49,14 @@
 
 <% end %>
 
-
 <% @post.comments.reverse_each do |comment| %>
-  <% if comment.name.blank? %>
-    Anonymous<br>
-  <% else %>
-    <%= comment.name %><br>
-  <% end %>
-  <%= comment.created_at.strftime("%B %d, %Y") %><br>
-  <%= comment.body %><br><br>
+  <div class="comment">
+    <p><% if comment.name.blank? %>
+      Anonymous<br>
+    <% else %>
+      <%= comment.name %><br>
+    <% end %></p>
+    <span class="date"><%= comment.created_at.strftime("%B %d, %Y") %></span>
+    <p><%= comment.body %></p>
+  </div>
 <% end %>
