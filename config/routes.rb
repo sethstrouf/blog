@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get 'work',    to: 'static_pages#work'
   root 'posts#index'
   resources :posts
+  resources :comments, only: %i[show create destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
