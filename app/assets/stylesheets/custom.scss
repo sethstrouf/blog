@@ -199,6 +199,16 @@ article {
   }
 }
 
+.blog-image {
+  img {
+    width: 100px;
+    border-radius: 50%;
+    @media all and (min-width: 1090px) {
+      width: 150px;
+    }
+  }
+}
+
 .title {
   color: black !important;
 }
@@ -237,6 +247,15 @@ article {
 .post {
   border-bottom: thin solid rgba(128, 128, 128, 0.527);
   padding: 25px 0;
+  .image {
+    text-align: center;
+    img {
+      width: 300px;
+      @media all and (min-width: 1090px) {
+        width: 500px;
+      }
+    }
+  }
 }
 
 .post:last-child {

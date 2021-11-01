@@ -7,7 +7,6 @@
 <% end %>
 
 <div class="post">
-<%= image_tag @post.image if @post.image.attache? %>
 <h1><%= @post.title %></h1>
 
 <p class="date">Created: <%= @post.created_at.strftime("%B %d, %Y")  %>
@@ -16,8 +15,11 @@
   <% end %>
 </p>
 
-<p><%= @post.body %></p>
+<div class="image">
+  <%= image_tag @post.display_image if @post.image.attached? %>
 </div>
+
+<p><%= @post.body %></p>
 
 <p><strong>Leave a comment!</strong></p>
 

@@ -6,6 +6,11 @@
   <% if !@posts.empty? %>
     <% @posts.each do |post| %>
       <div class="post">
+        <div class="blog-image">
+        <%= link_to post do %>
+          <%= image_tag post.display_image if post.image.attached? %>
+        <% end %>
+        </div>
         <h2><%= link_to post.title, post, class: "title" %></h2>
         <p class="date">Created: <%= post.created_at.strftime("%B %d, %Y")  %>
           <% if post.updated_at != post.created_at %> 

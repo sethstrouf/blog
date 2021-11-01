@@ -25,10 +25,10 @@
     <%= form.label :body %>
     <%= form.text_area :body, size: "33x20" %>
   </div>
-  
+
   <div class="field">
     <span class="image">
-      <%= form.file_field :image %>
+      <%= form.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
     </span>
   </div>
 
