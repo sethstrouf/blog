@@ -2,7 +2,9 @@
 
 <h1>blog</h1>
 
+
 <div class="blog">
+  <%= will_paginate @posts %>
   <% if !@posts.empty? %>
     <% @posts.each do |post| %>
       <div class="post">
@@ -29,4 +31,6 @@
   <% else %>
     <h2>No posts yet!</h2>
   <% end %>
+
+  <%= will_paginate @posts %>
 </div>
