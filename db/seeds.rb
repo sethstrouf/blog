@@ -20,7 +20,6 @@ if Post.count.zero?
 
     image_url = Faker::LoremFlickr.image
     downloaded_file = URI.open(image_url)
-    post.image.attach(io: downloaded_file, 
-                      filename: "image#{i}.png")
+    post.image.attach(io: downloaded_file, filename: "image#{i}.png")
   end
 end

@@ -1,9 +1,8 @@
 # Hannah's Blog
 
-### A recreation of my wife's blog (populated with Faker). 
+### A recreation of my wife's blog (populated with Faker).
 
 #### https://www.hannahbauer.me/
-
 
 ---
 
