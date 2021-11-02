@@ -16,11 +16,13 @@
       <nav class="topnav">
         <%= render 'shared/navigation' %>
       </nav>
-      <article>
-      <p id="notice"><%= notice %></p>
-      <p id="alert"><%= alert %></p>
-        <%= yield %>
-      </article>
+      <main>
+        <article>
+          <p id="notice"><%= notice %></p>
+          <p id="alert"><%= alert %></p>
+          <%= yield %>
+        </article>
+      </main>
       <footer>
         <%= render 'shared/footer' %>
       </footer>
