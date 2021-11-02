@@ -15,6 +15,8 @@
   - Vanilla CSS/SASS & JavaScript
 - Admin Authentication & Authorization
   - Devise
+- Accessibility
+  - Axe DevTools
 - Web Hosting
   - Heroku
   - Cloudflare
@@ -32,6 +34,8 @@
     - Constraints
     - Transformed indexes
     - Materialized views
+- Accessibility
+  - Use Axe DevTools from the beginning of development
 - Plan CSS beforehand
   - Cut down on redundancy
   - Maintain better consistency throughout site
