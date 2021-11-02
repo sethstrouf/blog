@@ -10,7 +10,7 @@
       <div class="post">
         <div class="blog-image">
         <%= link_to post do %>
-          <%= image_tag post.display_image if post.image.attached? %>
+          <%= image_tag (post.display_image if post.image.attached?), alt: "post thumbnail" %>
         <% end %>
         </div>
         <h2><%= link_to post.title, post, class: "title" %></h2>

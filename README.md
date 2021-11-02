@@ -36,6 +36,7 @@
     - Materialized views
 - Accessibility
   - Use Axe DevTools from the beginning of development
+  - Better use of landmarks
 - Plan CSS beforehand
   - Cut down on redundancy
   - Maintain better consistency throughout site

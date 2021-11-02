@@ -16,7 +16,7 @@
 </p>
 
 <div class="image">
-  <%= image_tag @post.display_image if @post.image.attached? %>
+  <%= image_tag (@post.display_image if @post.image.attached?), alt: "post header image" %>
 </div>
 
 <p><%= @post.body %></p>
