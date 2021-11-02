@@ -5,5 +5,5 @@ has_name:
   body: My first comment!
 
 no_name:
-  name: 
+  name:
   body: Anonymous comment!!

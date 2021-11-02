@@ -1,4 +1,4 @@
-require "active_support/core_ext/integer/time"
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -13,7 +13,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
@@ -40,8 +40,7 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options).
   # config.active_storage.service = :local
   # Store uploaded files on Amazon AWS.
-    config.active_storage.service = :amazon
-
+  config.active_storage.service = :amazon
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
@@ -56,13 +55,14 @@ Rails.application.configure do
   config.log_level = :info
 
   # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.log_tags = [:request_id]
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
-  config.active_job.queue_adapter     = :async
+  config.active_job.queue_adapter = :async
+
   # config.active_job.queue_name_prefix = "blog_production"
 
   config.action_mailer.perform_caching = false
@@ -74,13 +74,13 @@ Rails.application.configure do
   host = 'https://fathomless-depths-69771.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.sendgrid.net',
-    :port           => '587',
-    :authentication => :plain,
-    :user_name      => 'apikey',
-    :password       => ENV['SENDGRID_API_KEY'],
-    :domain         => 'heroku.com',
-    :enable_starttls_auto => true
+    address: 'smtp.sendgrid.net',
+    port: '587',
+    authentication: :plain,
+    user_name: 'apikey',
+    password: ENV['SENDGRID_API_KEY'],
+    domain: 'heroku.com',
+    enable_starttls_auto: true
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
@@ -103,10 +103,10 @@ Rails.application.configure do
   # require "syslog/logger"
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
-    logger           = ActiveSupport::Logger.new(STDOUT)
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
+    logger = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
-    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+    config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 
   # Do not dump schema after migrations.
