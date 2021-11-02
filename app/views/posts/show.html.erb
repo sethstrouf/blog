@@ -15,9 +15,11 @@
   <% end %>
 </p>
 
-<div class="image">
-  <%= image_tag (@post.display_image if @post.image.attached?), alt: "post header image" %>
-</div>
+<% if @post.image.attached? %>
+  <div class="image">
+    <%= image_tag @post.display_image, alt: "post header image" %>
+  </div>
+<% end %>
 
 <p><%= @post.body %></p>
 

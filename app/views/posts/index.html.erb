@@ -2,17 +2,18 @@
 
 <h1>blog</h1>
 
-
 <div class="blog">
   <%= will_paginate @posts %>
   <% if !@posts.empty? %>
     <% @posts.each do |post| %>
       <div class="post">
-        <div class="blog-image">
-        <%= link_to post do %>
-          <%= image_tag (post.display_image if post.image.attached?), alt: "post thumbnail" %>
+        <% if post.image.attached? %>
+          <div class="blog-image">
+          <%= link_to post do %>
+            <%= image_tag post.display_image, alt: "post thumbnail" %>
+          <% end %>
+          </div>
         <% end %>
-        </div>
         <h2><%= link_to post.title, post, class: "title" %></h2>
         <p class="date">Created: <%= post.created_at.strftime("%B %d, %Y")  %>
           <% if post.updated_at != post.created_at %> 
