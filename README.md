@@ -25,7 +25,7 @@
   - SendGrid
 - Faker
 
-### What I Learned:
+### To Improve:
 
 - Use PostgreSQL in development
   - Keep development and production databases the same
