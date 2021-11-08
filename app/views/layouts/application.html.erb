@@ -16,6 +16,7 @@
       <nav class="topnav">
         <%= render 'shared/navigation' %>
       </nav>
+      <%= link_to "Log in as Admin", new_admin_session_path, class: "admin-link" %>
       <main>
         <article>
           <p id="notice"><%= notice %></p>

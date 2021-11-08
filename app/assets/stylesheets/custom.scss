@@ -281,6 +281,14 @@ article {
   font-size: 12px;
 }
 
+.admin-link {
+  padding-top: 5px;
+  float: right;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
 /* Footer */
 footer {
   bottom: 0;
