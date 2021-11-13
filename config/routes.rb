@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'hello', to: 'static_pages#hello'
   get 'about', to: 'static_pages#about'
   get 'work', to: 'static_pages#work'
+  post 'sign_in_preview_admin', to: 'static_pages#sign_in_preview_admin'
   root 'posts#index'
   resources :posts
   resources :comments, only: %i[create destroy]

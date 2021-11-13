@@ -17,7 +17,7 @@
         <%= render 'shared/navigation' %>
       </nav>
       <% if !current_admin %>
-        <%= link_to "Log in as Admin", new_admin_session_path, class: "admin-link" %>
+        <p><%= link_to "Preview as Admin", sign_in_preview_admin_path, method: :post, class: "admin-link" %></p>
       <% end %>
       <main>
         <article>
