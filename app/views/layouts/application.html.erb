@@ -21,8 +21,12 @@
       <% end %>
       <main>
         <article>
-          <p id="notice"><%= notice %></p>
-          <p id="alert"><%= alert %></p>
+          <% if !notice.nil? %>
+            <p id="notice"><%= notice %></p>
+          <% end %>
+          <% if !alert.nil? %>
+            <p id="alert"><%= alert %></p>
+          <% end %>
           <%= yield %>
         </article>
       </main>

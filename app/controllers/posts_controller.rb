@@ -25,42 +25,57 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.image.attach(params[:post][:image])
 
-    respond_to do |format|
-      if @post.save
-        format.html do
-          redirect_to @post, notice: 'Post was successfully created.'
+    if helpers.preview_admin
+      flash[:alert] = "Can't post in Admin preview mode"
+      redirect_to root_path
+    else
+      respond_to do |format|
+        if @post.save
+          format.html do
+            redirect_to @post, notice: 'Post was successfully created.'
+          end
+          format.json { render :show, status: :created, location: @post }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @post.errors, status: :unprocessable_entity }
         end
-        format.json { render :show, status: :created, location: @post }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # PATCH/PUT /posts/1 or /posts/1.json
   def update
-    respond_to do |format|
-      if @post.update(post_params)
-        format.html do
-          redirect_to @post, notice: 'Post was successfully updated.'
+    if helpers.preview_admin
+      flash[:alert] = "Can't update in Admin preview mode"
+      redirect_to root_path
+    else
+      respond_to do |format|
+        if @post.update(post_params)
+          format.html do
+            redirect_to @post, notice: 'Post was successfully updated.'
+          end
+          format.json { render :show, status: :ok, location: @post }
+        else
+          format.html { render :edit, status: :unprocessable_entity }
+          format.json { render json: @post.errors, status: :unprocessable_entity }
         end
-        format.json { render :show, status: :ok, location: @post }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # DELETE /posts/1 or /posts/1.json
   def destroy
-    @post.destroy
-    respond_to do |format|
-      format.html do
-        redirect_to posts_url, notice: 'Post was successfully destroyed.'
+    if helpers.preview_admin
+      flash[:alert] = "Can't delete  in Admin preview mode"
+      redirect_to root_path
+    else
+      @post.destroy
+      respond_to do |format|
+        format.html do
+          redirect_to posts_url, notice: 'Post was successfully destroyed.'
+        end
+        format.json { head :no_content }
       end
-      format.json { head :no_content }
     end
   end
 
