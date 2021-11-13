@@ -1,8 +1,8 @@
 <% provide(:title, "Blog") %>
 
-<h1>blog</h1>
 
 <div class="blog">
+<h1>blog</h1>
   <%= will_paginate @posts %>
   <% if !@posts.empty? %>
     <% @posts.each do |post| %>
