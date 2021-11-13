@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  
+
   def create
     @post = Post.find(params[:comment][:post_id])
     @comment = @post.comments.build(comment_params)
@@ -15,8 +15,14 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @post = Post.find(@comment.post_id)
-    @comment.destroy
-    redirect_to @post
+
+    if helpers.preview_admin
+      flash[:alert] = "Can't delete comments in Admin preview mode"
+      redirect_to @post
+    else
+      @comment.destroy
+      redirect_to @post
+    end
   end
 
   private
