@@ -73,9 +73,16 @@ html {
   }
 }
 
-form {
+.form {
+  display: flex;
+  justify-content: center;
   text-align: center;
   padding-top: 25px;
+}
+
+div.field,
+div.actions {
+  margin-bottom: 10px;
 }
 
 input,
@@ -444,10 +451,7 @@ div.desc {
 
 /* Errors */
 
-div.field,
-div.actions {
-  margin-bottom: 10px;
-}
+
 
 #notice {
   padding-top: 20px;
@@ -469,10 +473,10 @@ div.actions {
 }
 
 #error_explanation {
-  width: 450px;
-  border: 2px solid #c00;
+  margin: 20px auto;
+  width: 400px;
+  border: 1px solid #c00;
   padding: 7px 7px 0;
-  margin-bottom: 20px;
   background-color: #f0f0f0;
 }
 
