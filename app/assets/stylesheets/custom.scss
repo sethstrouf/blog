@@ -226,8 +226,10 @@ article {
   img {
     width: 100px;
     border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1;
     @media all and (min-width: 1090px) {
-      width: 150px;
+      width: 250px;
     }
   }
 }
