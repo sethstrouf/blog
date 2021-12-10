@@ -16,6 +16,8 @@
   - Devise
 - Accessibility
   - Axe DevTools
+- Web Scraping
+  - Wrote using Ruby
 - Web Hosting
   - Heroku
   - Cloudflare
