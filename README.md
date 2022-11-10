@@ -19,7 +19,7 @@
 - Web Scraping
   - Wrote using Ruby
 - Web Hosting
-  - Heroku / Fly.io
+  - Heroku / Render
   - Cloudflare
 - Image Hosting
   - AWS
@@ -27,15 +27,6 @@
   - SendGrid
 - Faker
 
-### Deploy
+### Deploy with Render
 
-- fly auth login
-- fly deploy
-- flyctl status
-- flyctl open
-- flyctl logs
-
-## ENV Variables
-
-- flyctl secrets list
-- flyctl config env
+- bin/render-build.sh
