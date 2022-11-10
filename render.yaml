@@ -1,11 +1,11 @@
 databases:
-  - name: hannahsblog
+  - name: production
     databaseName: hannahsblog_db
     user: sethstrouf
 
 services:
   - type: web
-    name: hannahsblog
+    name: webdis
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
