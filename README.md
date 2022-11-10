@@ -19,10 +19,23 @@
 - Web Scraping
   - Wrote using Ruby
 - Web Hosting
-  - Heroku
+  - Heroku / Fly.io
   - Cloudflare
 - Image Hosting
   - AWS
 - Mailers
   - SendGrid
 - Faker
+
+### Deploy
+
+- fly auth login
+- fly deploy
+- flyctl status
+- flyctl open
+- flyctl logs
+
+## ENV Variables
+
+- flyctl secrets list
+- flyctl config env
