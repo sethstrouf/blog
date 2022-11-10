@@ -5,7 +5,7 @@ databases:
 
 services:
   - type: web
-    name: webdis
+    name: hannahsblog
     env: ruby
     region: oregon
     plan: free
