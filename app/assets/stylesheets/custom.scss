@@ -102,6 +102,10 @@ textarea {
 /* Navigation */
 
 /* Hide the links inside the navigation menu (except for logo/home) */
+nav {
+  height: 50px;
+}
+
 .topnav #myLinks {
   display: none;
   @media all and (min-width: 1090px) {
@@ -175,6 +179,12 @@ textarea {
       }
     }
   }
+}
+
+/* Main */
+
+main {
+  min-height: calc(100vh - 120px);
 }
 
 /* Article */
