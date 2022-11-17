@@ -4,7 +4,17 @@
 
 #### https://www.hannahbauer.me/
 
----
+## Available Commands
+
+In the project directory, you can run:
+
+#### `heroku run rails c`
+
+Access heroku production console.
+
+#### `heroku pg:reset && heroku run rails db:migrate && heroku run db:seed`
+
+Reset database and clear all data.
 
 ### Technologies Used:
 
